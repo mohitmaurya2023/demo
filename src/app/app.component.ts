@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'demo1';
+  title = 'Angular Template Driven Project';
+
+  userdata:any = {};
+
+  form_data(data:NgForm)
+  {
+    this.userdata = data;
+  }
 }
